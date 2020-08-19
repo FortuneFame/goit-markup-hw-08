@@ -1,0 +1,281 @@
+.backdrop {
+  position: fixed;
+  left: 0;
+  top: 0;
+
+  @include centeredFlex;
+  width: 100%;
+  height: 100%;
+
+  background-color: $backdrop-background-color;
+}
+
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.modal-form {
+  position: relative;
+
+  display: inline-block;
+  text-align: center;
+
+  top: 0;
+  left: 0;
+
+  width: 528px;
+
+  padding-top: 40px;
+  padding-right: 40px;
+  padding-bottom: 40px;
+  padding-left: 40px;
+
+  background-color: $page-color;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+.button-close {
+  position: absolute;
+
+  @include centeredFlex;
+  top: 8px;
+  right: 8px;
+
+  outline: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: $page-color;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  @include transitionSite;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    fill: $accent-color;
+  }
+}
+
+.modal-form-title {
+  text-align: center;
+  margin-bottom: 30px;
+
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 1.15;
+  letter-spacing: 0.03em;
+}
+
+.modal-form-input-wrapper {
+  position: relative;
+  margin-bottom: 28px;
+
+  @include transitionSite;
+
+  &:hover,
+  &:focus-within {
+    .modal-form-label {
+      transform: translateY(-40px) translateX(-26px);
+      color: $accent-color;
+    }
+    .icon-form {
+      fill: $accent-color;
+    }
+    .modal-form-input {
+      border: 1px solid #2196f3;
+    }
+  }
+}
+
+.modal-form-label {
+  position: absolute;
+
+  top: 50%;
+  left: 42px;
+  transform: translateY(-50%);
+
+  @include transitionSite;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.01em;
+  color: $pege-secondary-color;
+}
+
+.modal-form-input {
+  width: 448px;
+  height: 40px;
+
+  padding-top: 11px;
+  padding-right: 42px;
+  padding-bottom: 11px;
+  padding-left: 42px;
+
+  @include transitionSite;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  outline: none;
+  cursor: pointer;
+
+  &:valid {
+    border: 1px solid #2196f3;
+  }
+  &:not(:placeholder-shown) + .modal-form-label {
+    transform: translateY(-40px) translateX(-26px);
+    color: $accent-color;
+  }
+}
+
+.modal-form-texterea {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.modal-form-label-textarea {
+  position: absolute;
+
+  top: 12px;
+  left: 16px;
+
+  @include transitionSite;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.01em;
+  color: $pege-secondary-color;
+}
+
+.comment-modal-form {
+  width: 448px;
+  height: 120px;
+
+  padding-top: 12px;
+  padding-right: 16px;
+  padding-bottom: 12px;
+  padding-left: 16px;
+
+  @include transitionSite;
+
+  resize: none;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  outline: none;
+  cursor: pointer;
+  &:hover,
+  &:focus {
+    border: 1px solid #2196f3;
+  }
+  &:hover + .modal-form-label-textarea,
+  &:focus-within + .modal-form-label-textarea,
+  &:not(:placeholder-shown) + .modal-form-label-textarea {
+    transform: translateY(-32px);
+    color: $accent-color;
+  }
+}
+
+.icon-form {
+  position: absolute;
+  fill: $page-primary-color;
+  cursor: pointer;
+  @include transitionSite;
+}
+
+.icon-form-user {
+  top: 50%;
+  left: 19px;
+  @include translateY;
+}
+
+.icon-form-phone {
+  top: 50%;
+  left: 18.27px;
+  @include translateY;
+}
+
+.icon-form-letter {
+  top: 50%;
+  left: 17.5px;
+  @include translateY;
+}
+
+.modal-form-option {
+  margin-bottom: 30px;
+}
+
+.agreement-label {
+  @include centeredFlex;
+}
+
+.modal-form-checkbox {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+
+  &:checked + .modal-form-agreement {
+    border: none;
+    background-color: $accent-color;
+  }
+}
+
+.modal-form-agreement {
+  @include centeredFlex;
+  margin-right: 8.38px;
+
+  width: 16px;
+  height: 15px;
+  border: 1.7px solid #212121;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.icon-check-mark {
+  fill: $page-color;
+}
+
+.agreement-policy-form {
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: $pege-secondary-color;
+  cursor: pointer;
+}
+
+.agreement-policy {
+  display: inline-block;
+  vertical-align: baseline;
+  border-bottom: 1px solid #2196f3;
+
+  margin-left: 5px;
+
+  font-size: 14px;
+  line-height: 0.95;
+  letter-spacing: 0.03em;
+  color: $accent-color;
+
+  cursor: pointer;
+}
+
+.form-button {
+  width: 200px;
+  height: 50px;
+
+  border: none;
+  background-color: $btn-color;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  color: $page-color;
+  cursor: pointer;
+}

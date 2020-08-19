@@ -1,0 +1,32 @@
+// .logo {
+//   @include centeredFlex;
+//   margin-right: 85px;
+//   padding-top: 24px;
+//   padding-bottom: 25px;
+// }
+
+.logo-site {
+  @include centeredFlex;
+  // margin-right: 85px;
+  cursor: pointer;
+}
+
+// .logo-footer {
+//   margin-bottom: 20px;
+// }
+
+.my-logo-1 {
+  margin-right: 8px;
+  @include logoStyle;
+  color: $logo-color-one;
+}
+
+.my-logo-2 {
+  @include logoStyle;
+  color: $logo-color-two;
+}
+
+.my-logo-3 {
+  @include logoStyle;
+  color: $logo-color-three;
+}

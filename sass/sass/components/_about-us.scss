@@ -1,0 +1,37 @@
+.list-skills {
+  @include centeredFlex;
+}
+
+.icon-block-skill {
+  @include centeredFlex;
+
+  width: 270px;
+  height: 120px;
+  box-sizing: border-box;
+  margin-bottom: 30px;
+
+  background-color: $section-secondary-color;
+}
+
+.skill {
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+.skill-name {
+  margin-bottom: 10px;
+
+  font-size: 14px;
+  line-height: 1.19;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.skill-text {
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+
+  color: $pege-secondary-color;
+}
