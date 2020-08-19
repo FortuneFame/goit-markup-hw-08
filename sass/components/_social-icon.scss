@@ -1,0 +1,51 @@
+.team-social-links {
+  @include centeredFlex;
+  padding-bottom: 24px;
+
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+}
+
+.social-link {
+  @include centeredFlex;
+
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+
+  @include transitionSite;
+
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+    .social {
+      fill: $page-color;
+    }
+  }
+}
+
+.social {
+  fill: $social-color;
+
+  @include transitionSite;
+}
+
+.social-list-link {
+  @include centeredFlex;
+}
+
+.social-footer {
+  fill: #ffffff;
+}
+
+.social-link {
+  border-radius: 50%;
+  background-color: $footer-social-background-color;
+}
+
+.social-links {
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+}

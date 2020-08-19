@@ -1,0 +1,107 @@
+.iten-studio,
+.iten,
+.iten-portfolio {
+  @include siteNavIten;
+}
+
+.iten {
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+
+.iten-studio,
+.iten-portfolio {
+  color: $accent-color;
+}
+
+.iten-studio::before {
+  content: "";
+  position: absolute;
+  display: inline-block;
+
+  left: 50%;
+  bottom: 0;
+
+  width: 47px;
+  height: 4px;
+  transform: translate(-50%);
+
+  background-color: $accent-color;
+  border-radius: 2px;
+}
+
+.feedback-tel,
+.feedback-mail {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+
+  font-style: normal;
+  text-decoration: none;
+  color: $pege-secondary-color;
+
+  @include transitionSite;
+}
+
+header {
+  @include centeredFlex(flex, space-between, center);
+}
+
+.site-nav {
+  @include centeredFlex;
+}
+
+.header-list {
+  @include centeredFlex;
+  color: $accent-color;
+}
+
+.header-list-link {
+  &:not(:last-child) {
+    margin-right: 50px;
+  }
+}
+
+.feedback-list-item {
+  @include centeredFlex;
+  flex-wrap: wrap;
+}
+
+.feedback {
+  display: flex;
+  flex-wrap: nowrap;
+
+  &:not(:last-child) {
+    margin-right: 50px;
+  }
+}
+
+header a {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+.addrdess-link {
+  @include centeredFlex;
+  @include transitionSite;
+
+  &:hover,
+  &:focus {
+    .address-icon,
+    .feedback-tel,
+    .feedback-mail {
+      color: $accent-color;
+      fill: $accent-color;
+    }
+  }
+}
+
+.address-icon {
+  margin-right: 10px;
+  fill: $pege-secondary-color;
+
+  @include transitionSite;
+}

@@ -1,0 +1,96 @@
+.examples {
+  @include centeredFlex;
+  flex-wrap: wrap;
+}
+
+.examples-link {
+  position: relative;
+  display: block;
+  width: 370px;
+  height: 404px;
+
+  &:hover,
+  &:focus {
+    box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      0px 1px 1px rgba(0, 0, 0, 0.12);
+    .examples-text {
+      transform: translateY(0);
+    }
+  }
+  &:not(:nth-child(3n)) {
+    margin-right: 30px;
+  }
+  &:not(:nth-last-child(-n + 3)) {
+    margin-bottom: 30px;
+  }
+}
+
+.link-gallery {
+  display: inline-block;
+
+  width: 370px;
+  height: 404px;
+
+  outline: none;
+  text-decoration: none;
+
+  border: 1px solid $border-color;
+  box-sizing: border-box;
+}
+
+.hover-text {
+  position: relative;
+  overflow: hidden;
+
+  margin-bottom: 20px;
+}
+
+.img-project {
+  display: block;
+}
+
+.examples-text {
+  position: absolute;
+  display: inline-block;
+  top: 0;
+  left: 0;
+
+  width: 368px;
+  height: 294px;
+  padding-top: 63px;
+  padding-right: 24px;
+  padding-bottom: 63px;
+  padding-left: 24px;
+
+  transform: translateY(100%);
+
+  background: $text-examples-color;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+  color: $page-color;
+
+  @include transitionSite;
+}
+
+.examples-text-iten {
+  margin-bottom: 4px;
+  padding-left: 24px;
+  padding-right: 24px;
+
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+}
+
+.examples-name {
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-bottom: 20px;
+
+  font-size: 16px;
+  line-height: 1.88;
+  color: $pege-secondary-color;
+}

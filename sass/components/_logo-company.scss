@@ -1,19 +1,19 @@
-// .logo {
-//   @include centeredFlex;
-//   margin-right: 85px;
-//   padding-top: 24px;
-//   padding-bottom: 25px;
-// }
+.logo {
+  @include centeredFlex;
+  margin-right: 85px;
+  padding-top: 24px;
+  padding-bottom: 25px;
+}
 
 .logo-site {
   @include centeredFlex;
-  // margin-right: 85px;
+  margin-right: 85px;
   cursor: pointer;
 }
 
-// .logo-footer {
-//   margin-bottom: 20px;
-// }
+.logo-footer {
+  margin-bottom: 20px;
+}
 
 .my-logo-1 {
   margin-right: 8px;
