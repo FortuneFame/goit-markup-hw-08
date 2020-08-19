@@ -5,11 +5,6 @@
 .section-hero {
   margin-left: auto;
   margin-right: auto;
-  max-width: 1600px;
-  height: 600px;
-  padding-top: 200px;
-  padding-bottom: 200px;
-
   background-image: linear-gradient(
       rgba(47, 48, 58, 0.8),
       rgba(47, 48, 58, 0.8)
@@ -17,6 +12,13 @@
     url(/images/hero/Hero_img.jpg);
   background-repeat: no-repeat;
   background-position: center;
+
+  @media screen and (min-width: 1024px) {
+    max-width: 1600px;
+    height: 600px;
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
 }
 
 /* Кнопка */
