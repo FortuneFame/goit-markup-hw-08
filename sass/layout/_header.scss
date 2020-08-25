@@ -1,0 +1,77 @@
+header {
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+.header-conteiner {
+  @include centeredFlex;
+}
+
+.menu-mobile-btn {
+  background-color: transparent;
+  border: none;
+}
+
+.menu-wrapper {
+  position: absolute;
+  display: none;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  margin: 0 auto;
+  // margin-top: 60px;
+
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08),
+    0px 1px 3px rgba(0, 0, 0, 0.16);
+
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.167;
+  letter-spacing: 0.02em;
+}
+
+.feedback-mail,
+.feedback-tel {
+  color: $pege-secondary-color;
+}
+.icon-menu_mobile {
+  width: 24px;
+  height: 16px;
+}
+.icon-close_menu_mobile {
+  width: 19px;
+  height: 19px;
+}
+@media screen and (max-width: 767px) {
+  .header-conteiner {
+    max-width: 480px;
+    margin: 0 auto;
+  }
+  .my-logo-1 {
+    font-family: Raleway;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 1.166;
+    letter-spacing: 0.03em;
+    color: $logo-color-one;
+  }
+
+  .my-logo-2 {
+    font-family: Raleway;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 1.166;
+    letter-spacing: 0.03em;
+    color: $logo-color-two;
+  }
+
+  .my-logo-3 {
+    font-family: Raleway;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 1.166;
+    letter-spacing: 0.03em;
+    color: $logo-color-three;
+  }
+}

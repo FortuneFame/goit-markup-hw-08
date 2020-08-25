@@ -4,13 +4,6 @@
   align-items: $ali-subtype;
 }
 
-@mixin logoStyle {
-  flex-wrap: nowrap;
-  font-family: Raleway;
-  font-size: 26px;
-  line-height: 1.19;
-}
-
 @mixin siteNavIten {
   position: relative;
 
