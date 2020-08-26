@@ -1,77 +1,59 @@
 header {
-  padding-top: 16px;
-  padding-bottom: 16px;
-}
-.header-conteiner {
-  @include centeredFlex;
+  @include centeredFlex(flex, space-between);
 }
 
-.menu-mobile-btn {
-  background-color: transparent;
-  border: none;
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
 }
 
-.menu-wrapper {
-  position: absolute;
-  display: none;
+.logo {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+}
 
-  top: 0;
-  left: 0;
-
-  width: 100%;
-  margin: 0 auto;
-  // margin-top: 60px;
-
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08),
-    0px 1px 3px rgba(0, 0, 0, 0.16);
-
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 1.167;
-  letter-spacing: 0.02em;
+.logo-header {
+  color: $logo-color-two;
+}
+.logo-footer {
+  color: $logo-color-three;
 }
 
 .feedback-mail,
 .feedback-tel {
   color: $pege-secondary-color;
+  @include transitionSite;
 }
-.icon-menu_mobile {
-  width: 24px;
-  height: 16px;
+
+.iten {
+  @include transitionSite;
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
 }
-.icon-close_menu_mobile {
-  width: 19px;
-  height: 19px;
+.iten-studio,
+.iten-portfolio {
+  position: relative;
+  color: $accent-color;
 }
+
 @media screen and (max-width: 767px) {
-  .header-conteiner {
+  header {
+    position: relative;
+    height: 60px;
     max-width: 480px;
     margin: 0 auto;
   }
-  .my-logo-1 {
+  .logo {
     font-family: Raleway;
     font-weight: bold;
     font-size: 24px;
     line-height: 1.166;
     letter-spacing: 0.03em;
     color: $logo-color-one;
-  }
-
-  .my-logo-2 {
-    font-family: Raleway;
-    font-weight: bold;
-    font-size: 24px;
-    line-height: 1.166;
-    letter-spacing: 0.03em;
-    color: $logo-color-two;
-  }
-
-  .my-logo-3 {
-    font-family: Raleway;
-    font-weight: bold;
-    font-size: 24px;
-    line-height: 1.166;
-    letter-spacing: 0.03em;
-    color: $logo-color-three;
   }
 }

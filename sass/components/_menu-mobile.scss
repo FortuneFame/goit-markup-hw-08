@@ -1,0 +1,165 @@
+@media screen and (max-width: 1200px) {
+  .icon-menu_mobile,
+  .icon-close_menu_mobile {
+    display: none;
+  }
+  .menu-wrapper {
+    position: static;
+    display: flex;
+  }
+}
+@media screen and (max-width: 767px) {
+  .menu-mobile-btn {
+    background-color: transparent;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: none;
+    height: 40px;
+
+    @include transitionSite;
+
+    &.is-open {
+      .icon-close_menu_mobile {
+        display: block;
+      }
+      .icon-menu_mobile {
+        display: none;
+      }
+    }
+
+    &:focus svg {
+      fill: $accent-color;
+    }
+  }
+
+  .icon-menu_mobile {
+    display: block;
+    width: 24px;
+    height: 16px;
+  }
+
+  .icon-close_menu_mobile {
+    display: none;
+    width: 19px;
+    height: 19px;
+  }
+  .menu-wrapper {
+    position: absolute;
+    display: none;
+    background-color: #ffffff;
+
+    top: 0;
+    left: 0;
+
+    height: 393px;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 60px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08),
+      0px 1px 3px rgba(0, 0, 0, 0.16);
+
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.167;
+    letter-spacing: 0.02em;
+
+    &.is-open {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      transform: translateY(0);
+    }
+
+    .header-site-nav {
+      display: block;
+      text-align: center;
+    }
+    .header-feedback {
+      width: 100%;
+    }
+
+    .iten {
+      margin-bottom: 40px;
+    }
+
+    .iten-studio {
+      &::before {
+        width: 66px;
+      }
+    }
+    .iten-portfolio {
+      &::before {
+        width: 99px;
+      }
+    }
+
+    .iten-studio,
+    .iten-portfolio {
+      margin-bottom: 52px;
+      &::before {
+        content: "";
+        position: absolute;
+        display: inline-block;
+
+        bottom: 0;
+        top: 26px;
+        left: 50%;
+
+        height: 4px;
+        transform: translate(-50%);
+
+        background-color: $accent-color;
+        border-radius: 2px;
+      }
+    }
+    .header-site-nav {
+      :nth-child(n + 2) {
+        margin-bottom: 40px;
+      }
+    }
+    .feedback-list {
+      :not(:last-child) {
+        margin-bottom: 16px;
+      }
+    }
+
+    .envelope {
+      width: 16px;
+      height: 11.2px;
+    }
+
+    .tel {
+      width: 10px;
+      height: 14.94px;
+    }
+
+    .addrdess-link {
+      display: flex;
+      justify-content: center;
+      align-items: baseline;
+
+      height: 21px;
+
+      &:focus .feedback-tel,
+      &:focus .feedback-mail {
+        color: $accent-color;
+      }
+
+      &:focus svg {
+        fill: $accent-color;
+      }
+
+      .address-icon {
+        fill: $pege-secondary-color;
+        margin-right: 10px;
+      }
+    }
+  }
+}
