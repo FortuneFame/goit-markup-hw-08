@@ -1,0 +1,30 @@
+.company-users-link {
+  //   @include centeredFlex(flex, space-between);
+}
+
+.link-user-logo {
+  //   @include centeredFlex;
+
+  min-width: 170px;
+  min-height: 90px;
+  cursor: pointer;
+
+  border: 1px solid $social-color;
+  box-sizing: border-box;
+  border-radius: 4px;
+
+  @include transitionSite;
+
+  &:hover,
+  &:focus {
+    border: 1px solid $accent-color;
+    .logo-clients {
+      fill: $accent-color;
+    }
+  }
+}
+
+.logo-clients {
+  fill: $social-color;
+  @include transitionSite;
+}

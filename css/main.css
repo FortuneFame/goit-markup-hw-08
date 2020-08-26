@@ -638,6 +638,124 @@ header {
   }
 }
 
+.team {
+  text-align: center;
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
+  border-radius: 0px 0px 4px 4px;
+  background-color: #ffffff;
+}
+
+.team:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.our-team {
+  padding-top: 60px;
+  background: #f5f4fa;
+}
+
+.team-foto {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.team-name {
+  margin-bottom: 10px;
+  font-size: 16px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+}
+
+.team-profession {
+  margin-bottom: 16px;
+  font-size: 16px;
+  line-height: 1.187;
+  letter-spacing: 0.03em;
+  color: #757575;
+}
+
+@media screen and (max-width: 767px) {
+  .team-foto {
+    max-width: 450px;
+  }
+}
+
+.team-social-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 24px;
+}
+
+.team-social-links:not(:last-child) {
+  margin-right: 10px;
+}
+
+.social-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social-link:hover, .social-link:focus {
+  background-color: #2196f3;
+}
+
+.social-link:hover .social, .social-link:focus .social {
+  fill: #ffffff;
+}
+
+.social {
+  fill: #afb1b8;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social-list-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-footer {
+  fill: #ffffff;
+}
+
+.social-link {
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.social-links:not(:last-child) {
+  margin-right: 10px;
+}
+
+.link-user-logo {
+  min-width: 170px;
+  min-height: 90px;
+  cursor: pointer;
+  border: 1px solid #afb1b8;
+  box-sizing: border-box;
+  border-radius: 4px;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.link-user-logo:hover, .link-user-logo:focus {
+  border: 1px solid #2196f3;
+}
+
+.link-user-logo:hover .logo-clients, .link-user-logo:focus .logo-clients {
+  fill: #2196f3;
+}
+
+.logo-clients {
+  fill: #afb1b8;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .backdrop {
   position: fixed;
   left: 0;
