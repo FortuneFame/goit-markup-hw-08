@@ -1,1 +1,79 @@
+.section-hero {
+  margin-left: auto;
+  margin-right: auto;
+}
 
+.hero {
+  text-align: center;
+}
+
+.hero-button {
+  border: 1px solid transparent;
+  border-radius: 4px;
+
+  background: $btn-color;
+  color: $page-color;
+
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.9;
+  letter-spacing: 0.06em;
+}
+
+.main-title {
+  margin-bottom: 30px;
+
+  text-align: center;
+
+  font-weight: 900;
+  font-size: 26px;
+  line-height: 1.615;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+
+  color: $page-color;
+}
+
+@media screen and (max-width: 767px) {
+  .section-hero {
+    max-width: 480px;
+    padding-top: 118px;
+    padding-bottom: 118px;
+
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.8),
+        rgba(47, 48, 58, 0.8)
+      ),
+      url(/images/hero/mobile/Hero.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    .section-hero {
+      background-image: linear-gradient(
+          rgba(47, 48, 58, 0.8),
+          rgba(47, 48, 58, 0.8)
+        ),
+        url(/images/hero/mobile/Hero@2x.jpg);
+    }
+  }
+  @media screen and (min-device-pixel-ratio: 3),
+    screen and (min-resolution: 3dppx),
+    screen and (min-resolution: 288dpi) {
+    .section-hero {
+      background-image: linear-gradient(
+          rgba(47, 48, 58, 0.8),
+          rgba(47, 48, 58, 0.8)
+        ),
+        url(/images/hero/mobile/Hero@3x.jpg);
+    }
+  }
+  .hero-button {
+    padding-top: 10px;
+    padding-right: 32px;
+    padding-bottom: 10px;
+    padding-left: 32px;
+  }
+}

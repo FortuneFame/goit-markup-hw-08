@@ -303,20 +303,6 @@ img {
   padding-right: 15px;
 }
 
-@media screen and (max-width: 768px) {
-  .section {
-    padding-top: 60px;
-    padding-bottom: 60px;
-  }
-}
-
-@media screen and (max-width: 1200px) {
-  .section {
-    padding-top: 94px;
-    padding-bottom: 94px;
-  }
-}
-
 .conteiner {
   margin: 0 auto;
   padding-left: 15px;
