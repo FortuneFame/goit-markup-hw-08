@@ -1,0 +1,48 @@
+.list-skills {
+  //   @include centeredFlex;
+}
+
+.icon-block-skill {
+  @include centeredFlex;
+
+  //   max-width: 450px;
+  height: 120px;
+  box-sizing: border-box;
+  margin-bottom: 30px;
+
+  background-color: $section-secondary-color;
+}
+
+// .skill {
+//   &:not(:last-child) {
+//     margin-right: 30px;
+//   }
+// }
+
+.skill-name {
+  margin-bottom: 10px;
+
+  font-size: 14px;
+  line-height: 1.19;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.skill-text {
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+
+  color: $pege-secondary-color;
+}
+@media screen and (max-width: 767px) {
+  .icon-block-skill {
+    max-width: 100%;
+  }
+  .skill-name {
+    text-align: center;
+  }
+  .company-skills {
+    margin-bottom: 60px;
+  }
+}
