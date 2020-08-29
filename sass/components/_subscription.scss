@@ -1,0 +1,85 @@
+.footer-form {
+  //   @include centeredFlex(flex, space-between);
+}
+
+.form-input {
+  //   margin-right: 12px;
+  padding-left: 16px;
+  padding-right: 16px;
+
+  // width: 358px;
+  // height: 50px;
+
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+  color: $page-color;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  &:focus {
+    outline: none;
+  }
+  &::placeholder {
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: 0.03em;
+    color: $footer-text-secondary-color;
+  }
+}
+
+.footer-form-input {
+  //   @include centeredFlex;
+}
+
+.footer-button {
+  //   @include centeredFlex;
+
+  padding: 0;
+  border: none;
+  width: 200px;
+  height: 50px;
+
+  background: $accent-color;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+}
+
+.name-btn {
+  margin-right: 10px;
+  font-size: 16px;
+  line-height: 30px;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+
+  color: $page-color;
+}
+
+.icon-submit {
+  fill: $page-color;
+}
+@media screen and (max-width: 479px) {
+  .footer-form-input {
+    display: inline-block;
+    text-align: center;
+  }
+  .form-input {
+    width: 100%;
+    height: 50px;
+    margin-bottom: 20px;
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 1200px) {
+  .footer-form-input {
+    display: inline-block;
+    text-align: center;
+  }
+  .form-input {
+    width: 450px;
+    height: 50px;
+    margin-bottom: 20px;
+  }
+  .submit {
+  }
+}
