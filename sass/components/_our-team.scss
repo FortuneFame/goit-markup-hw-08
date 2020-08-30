@@ -1,9 +1,6 @@
 .team {
   text-align: center;
 
-  &:not(:last-child) {
-    margin-bottom: 30px;
-  }
   box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 1px 3px rgba(0, 0, 0, 0.12);
   border-radius: 0px 0px 4px 4px;
@@ -41,9 +38,34 @@
   letter-spacing: 0.03em;
   color: $pege-secondary-color;
 }
+
 @media screen and (max-width: 767px) {
+  .team {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
   .team-foto {
     max-width: 450px;
   }
 }
+@media screen and (min-width: 768px) {
+  .team-list-link {
+    @include centeredFlex(flex, center, baseline);
+    flex-wrap: wrap;
+  }
+  .team {
+    margin-bottom: 60px;
+    width: calc((100% - 30px) / 2);
 
+    &:not(:nth-last-child(-n + 2)) {
+      margin-bottom: 30px;
+    }
+    &:not(:nth-child(2n)) {
+      margin-right: 30px;
+    }
+  }
+  .minor-title {
+    margin-bottom: 30px;
+  }
+}

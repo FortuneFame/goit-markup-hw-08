@@ -6,12 +6,13 @@ header {
   opacity: 0;
   visibility: hidden;
 }
+.address-icon {
+  fill: $pege-secondary-color;
+}
 
 .logo {
   height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include centeredFlex;
   flex-wrap: nowrap;
 }
 
@@ -22,6 +23,15 @@ header {
   color: $logo-color-three;
 }
 
+.envelope {
+  width: 16px;
+  height: 11.2px;
+}
+
+.tel {
+  width: 10px;
+  height: 14.94px;
+}
 .feedback-mail,
 .feedback-tel {
   color: $pege-secondary-color;
@@ -30,6 +40,7 @@ header {
 
 .iten {
   @include transitionSite;
+  height: 100%;
   &:hover,
   &:focus {
     color: $accent-color;
@@ -40,7 +51,83 @@ header {
   position: relative;
   color: $accent-color;
 }
+@media screen and (min-width: 768px) {
+  header {
+    height: 80px;
+  }
+  .logo {
+    font-family: Raleway;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 1.166;
+    letter-spacing: 0.03em;
+    color: $logo-color-one;
+  }
+  .menu-wrapper {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.143;
+    letter-spacing: 0.02em;
+  }
+  .header-list {
+    @include centeredFlex;
+    margin-right: 84px;
+    height: 80px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+  .header-list-link {
+    &:not(:last-child) {
+      margin-right: 50px;
+    }
+  }
 
+  .header-feedback {
+    @include centeredFlex;
+  }
+  .feedback {
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+  .addrdess-link {
+    @include centeredFlex(flex, start);
+
+    &:focus .feedback-tel,
+    &:focus .feedback-mail {
+      color: $accent-color;
+    }
+
+    &:focus svg {
+      fill: $accent-color;
+    }
+  }
+  .address-icon {
+    margin-right: 8px;
+  }
+  .menu-mobile-btn {
+    display: none;
+  }
+  .iten-studio,
+  .iten-portfolio {
+    &::before {
+      content: "";
+      position: absolute;
+      display: inline-block;
+
+      left: 50%;
+      top: 44px;
+
+      // margin-top: 80px;
+      width: 47px;
+      height: 4px;
+      transform: translate(-50%);
+
+      background-color: $accent-color;
+      border-radius: 2px;
+    }
+  }
+}
 @media screen and (max-width: 767px) {
   header {
     position: relative;

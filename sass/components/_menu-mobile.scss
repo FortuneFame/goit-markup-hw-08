@@ -12,9 +12,7 @@
   .menu-mobile-btn {
     background-color: transparent;
     height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include centeredFlex;
 
     border: none;
     height: 40px;
@@ -50,6 +48,7 @@
     position: absolute;
     display: none;
     background-color: #ffffff;
+    z-index: 100;
 
     top: 0;
     left: 0;
@@ -70,9 +69,7 @@
     letter-spacing: 0.02em;
 
     &.is-open {
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      @include centeredFlex;
       flex-wrap: wrap;
       transform: translateY(0);
     }
@@ -130,16 +127,6 @@
       }
     }
 
-    .envelope {
-      width: 16px;
-      height: 11.2px;
-    }
-
-    .tel {
-      width: 10px;
-      height: 14.94px;
-    }
-
     .addrdess-link {
       display: flex;
       justify-content: center;
@@ -157,7 +144,6 @@
       }
 
       .address-icon {
-        fill: $pege-secondary-color;
         margin-right: 10px;
       }
     }

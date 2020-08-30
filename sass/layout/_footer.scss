@@ -44,16 +44,12 @@
 
   color: $page-color;
 }
-
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1199px) {
   .footer-nav {
     margin-bottom: 60px;
   }
   .logo-company-footer {
     margin-bottom: 20px;
-  }
-  .footer-address-links {
-    text-align: center;
   }
   .footer-address-iten {
     text-align: center;
@@ -62,10 +58,28 @@
     }
   }
   .join {
-    text-align: center;
     margin-bottom: 20px;
+    text-align: center;
   }
+}
+@media screen and (max-width: 767px) {
+  .footer-address-links {
+    text-align: center;
+  }
+
   .social-list-link {
     margin-bottom: 60px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .wrapper-footer {
+    @include centeredFlex(flex, center, baseline);
+    flex-wrap: wrap;
+  }
+  .footer-nav {
+    margin-right: 165px;
+  }
+  .footer-social-links {
+    text-align: center;
   }
 }

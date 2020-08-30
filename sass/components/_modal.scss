@@ -103,8 +103,8 @@
 }
 
 .modal-form-input {
-  width: 448px;
-  height: 40px;
+  // width: 448px;
+  // height: 40px;
 
   padding-top: 11px;
   padding-right: 42px;
@@ -276,11 +276,25 @@
   color: $page-color;
   cursor: pointer;
 }
-
+.modal-form-input {
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .modal-form {
+    width: 450px;
+    height: 609px;
+  }
+}
 @media screen and (max-width: 767px) {
+  .modal-form {
+    margin-right: 15px;
+    margin-left: 15px;
+    max-width: 450px;
+    height: 609px;
+  }
   .button-close {
-    top: 16px;
-    right: 32px;
+    top: 8px;
+    right: 8px;
   }
   .modal-form-title {
     text-align: center;
@@ -301,7 +315,6 @@
     line-height: 1.667;
   }
   .modal-form-input {
-    width: 370px;
     height: 40px;
   }
   .modal-form-label-textarea {
@@ -319,7 +332,7 @@
   }
 }
 .comment-modal-form {
-  max-width: 370px;
+  width: 100%;
   height: 120px;
 
   &:hover + .modal-form-label-textarea,
