@@ -21,7 +21,7 @@
 }
 
 .footer-button {
-  @include centeredFlex;
+  // @include centeredFlex;
 
   padding: 0;
   border: none;
@@ -58,7 +58,26 @@
     margin-bottom: 20px;
   }
 }
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .footer-form-input {
+    display: inline-block;
+    width: 450px;
+    text-align: center;
+  }
+  .form-input {
+    display: block;
+    width: 100%;
+    height: 50px;
+    margin-bottom: 20px;
+  }
+  .footer-button {
+    text-align: center;
+  }
+}
 @media screen and (min-width: 480px) and (max-width: 767px) {
+  .footer {
+    text-align: center;
+  }
   .footer-form-input {
     display: inline-block;
     text-align: center;
@@ -68,40 +87,12 @@
     height: 50px;
     margin-bottom: 20px;
   }
-}
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  .footer-form-input {
-    display: inline-block;
-    // width: 450px;
+  .footer-button {
     text-align: center;
   }
-  .form-input {
-    display: block;
-    width: 100%;
-    height: 50px;
-    margin-bottom: 20px;
-  }
 }
+
 @media screen and (min-width: 1200px) {
-  .footer-feedback-form {
-    width: 582px;
-  }
-  // .footer-form {
-  //   @include centeredFlex;
-  // .footer-form-input {
-  //   @include centeredFlex;
-  // }
-  // .form-input {
-  //   min-width: 100%;
-  //   margin-right: 12px;
-  //   margin-top: 0;
-  //   margin-bottom: 0;
-  // }
-  // .footer-button {
-  //   @include centeredFlex;
-  //   padding-right: 29px;
-  //   padding-left: 29px;
-  // }
   .footer-form {
     @include centeredFlex(flex, space-between);
   }
@@ -132,10 +123,7 @@
   }
 
   .footer-form-input {
-    .form-input {
-      display: block;
-      width: 358px;
-    }
+    @include centeredFlex;
   }
 
   .footer-button {

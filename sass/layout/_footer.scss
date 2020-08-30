@@ -38,12 +38,29 @@
 }
 
 @media screen and (max-width: 767px) {
-  .footer-address-links {
-    text-align: center;
+  .logo-company-footer {
+    margin-bottom: 20px;
   }
 
+  .footer-address-iten {
+    text-align: center;
+    &:not(:last-child) {
+      margin-bottom: 8px;
+    }
+  }
+
+  .footer-nav {
+    margin-bottom: 60px;
+  }
   .social-list-link {
     margin-bottom: 60px;
+  }
+  .join {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .footer-feedback-form {
+    text-align: center;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
@@ -75,15 +92,16 @@
   }
 }
 @media screen and (min-width: 1200px) {
-  .logo {
+  .logo-company-footer {
     margin-bottom: 20px;
   }
   .footer {
+    // @include centeredFlex(flex, space-between, baseline);
     background: $footer-background-color;
   }
 
   .wrapper-footer {
-    @include centeredFlex(flex, center, baseline);
+    @include centeredFlex(flex, space-between, baseline);
 
     padding-top: 60px;
     padding-bottom: 60px;

@@ -182,19 +182,19 @@
 .icon-form-user {
   top: 50%;
   left: 19px;
-  @include translateY;
+  transform: translateY(-50%);
 }
 
 .icon-form-phone {
   top: 50%;
   left: 18.27px;
-  @include translateY;
+  transform: translateY(-50%);
 }
 
 .icon-form-letter {
   top: 50%;
   left: 17.5px;
-  @include translateY;
+  transform: translateY(-50%);
 }
 
 .modal-form-option {
@@ -279,7 +279,7 @@
 .modal-form-input {
   width: 100%;
 }
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 1200px) {
   .modal-form {
     width: 450px;
     height: 609px;
@@ -340,4 +340,6 @@
   &:not(:placeholder-shown) + .modal-form-label-textarea {
     transform: translateY(-36px);
   }
+}
+@media screen and (max-width: 767px) {
 }
