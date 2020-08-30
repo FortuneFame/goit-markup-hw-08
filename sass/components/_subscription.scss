@@ -21,6 +21,8 @@
 }
 
 .footer-button {
+  @include centeredFlex;
+
   padding: 0;
   border: none;
   width: 200px;
@@ -67,10 +69,10 @@
     margin-bottom: 20px;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .footer-form-input {
     display: inline-block;
-    width: 450px;
+    // width: 450px;
     text-align: center;
   }
   .form-input {
@@ -78,5 +80,89 @@
     width: 100%;
     height: 50px;
     margin-bottom: 20px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer-feedback-form {
+    width: 582px;
+  }
+  // .footer-form {
+  //   @include centeredFlex;
+  // .footer-form-input {
+  //   @include centeredFlex;
+  // }
+  // .form-input {
+  //   min-width: 100%;
+  //   margin-right: 12px;
+  //   margin-top: 0;
+  //   margin-bottom: 0;
+  // }
+  // .footer-button {
+  //   @include centeredFlex;
+  //   padding-right: 29px;
+  //   padding-left: 29px;
+  // }
+  .footer-form {
+    @include centeredFlex(flex, space-between);
+  }
+
+  .form-input {
+    margin-right: 12px;
+    padding-left: 16px;
+
+    width: 358px;
+    height: 50px;
+
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: 0.03em;
+    color: $page-color;
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    &:focus {
+      outline: none;
+    }
+    &::placeholder {
+      font-size: 16px;
+      line-height: 1.25;
+      letter-spacing: 0.03em;
+      color: $footer-text-secondary-color;
+    }
+  }
+
+  .footer-form-input {
+    .form-input {
+      display: block;
+      width: 358px;
+    }
+  }
+
+  .footer-button {
+    @include centeredFlex;
+
+    padding: 0;
+    border: none;
+    width: 200px;
+    height: 50px;
+
+    background: $accent-color;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+  }
+
+  .name-btn {
+    margin-right: 10px;
+    font-size: 16px;
+    line-height: 30px;
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.06em;
+
+    color: $page-color;
+  }
+
+  .icon-submit {
+    fill: $page-color;
   }
 }

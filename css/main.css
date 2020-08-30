@@ -410,9 +410,6 @@ header {
 }
 
 @media screen and (min-width: 768px) {
-  header {
-    height: 80px;
-  }
   .logo {
     font-family: Raleway;
     font-weight: bold;
@@ -435,6 +432,7 @@ header {
     height: 80px;
     padding-top: 32px;
     padding-bottom: 32px;
+    cursor: pointer;
   }
   .header-list-link:not(:last-child) {
     margin-right: 50px;
@@ -451,6 +449,7 @@ header {
     display: flex;
     justify-content: start;
     align-items: center;
+    height: 100%;
   }
   .addrdess-link:focus .feedback-tel,
   .addrdess-link:focus .feedback-mail {
@@ -477,6 +476,77 @@ header {
     transform: translate(-50%);
     background-color: #2196f3;
     border-radius: 2px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  header {
+    max-height: 80px;
+  }
+  header a {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+  .addrdess-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .addrdess-link:hover .address-icon,
+  .addrdess-link:hover .feedback-tel,
+  .addrdess-link:hover .feedback-mail, .addrdess-link:focus .address-icon,
+  .addrdess-link:focus .feedback-tel,
+  .addrdess-link:focus .feedback-mail {
+    color: #2196f3;
+    fill: #2196f3;
+  }
+  .iten-studio::before,
+  .iten-portfolio::before {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    left: 50%;
+    top: 44px;
+    margin-top: 30px;
+    width: 47px;
+    height: 4px;
+    transform: translate(-50%);
+    background-color: #2196f3;
+    border-radius: 2px;
+  }
+  .menu-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+  .feedback-list-item {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    height: 80px;
+  }
+  .header-list {
+    margin-right: 305px;
+  }
+  .logo {
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 1.192;
+    letter-spacing: 0.03em;
+  }
+  .feedback {
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .feedback:not(:last-child) {
+    margin-right: 50px;
+  }
+  .address-icon {
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 }
 
@@ -669,7 +739,7 @@ header {
 
 @media screen and (max-width: 767px) {
   .section-hero {
-    background-image: linear-gradient(rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.8)), url(/images/hero/mobile/Hero.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/hero/mobile/Hero.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -678,13 +748,13 @@ header {
 
 @media screen and (max-width: 767px) and (min-device-pixel-ratio: 2), screen and (max-width: 767px) and (min-resolution: 192dpi), screen and (max-width: 767px) and (min-resolution: 2dppx) {
   .section-hero {
-    background-image: linear-gradient(rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.8)), url(/images/hero/mobile/Hero@2x.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/hero/mobile/Hero@2x.jpg);
   }
 }
 
 @media screen and (max-width: 767px) and (min-device-pixel-ratio: 3), screen and (max-width: 767px) and (min-resolution: 3dppx), screen and (max-width: 767px) and (min-resolution: 288dpi) {
   .section-hero {
-    background-image: linear-gradient(rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.8)), url(/images/hero/mobile/Hero@3x.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/hero/mobile/Hero@3x.jpg);
   }
 }
 
@@ -701,7 +771,7 @@ header {
   .section-hero {
     height: 400px;
     margin-bottom: 60px;
-    background-image: linear-gradient(rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.8)), url(/images/hero/tablet/Hero.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/hero/tablet/Hero.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -710,13 +780,45 @@ header {
 
 @media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
   .section-hero {
-    background-image: linear-gradient(rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.8)), url(/images/hero/tablet/Hero@2x.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/hero/tablet/Hero@2x.jpg);
   }
 }
 
 @media screen and (min-width: 768px) and (min-device-pixel-ratio: 3), screen and (min-width: 768px) and (min-resolution: 3dppx), screen and (min-width: 768px) and (min-resolution: 288dpi) {
   .section-hero {
-    background-image: linear-gradient(rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.8)), url(/images/hero/tablet/Hero@3x.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/hero/tablet/Hero@3x.jpg);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .section-hero {
+    height: 600px;
+    margin-bottom: 94px;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/hero/laptop/Hero.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .section-hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/hero/laptop/Hero@2x.jpg);
+  }
+}
+
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 3), screen and (min-width: 1200px) and (min-resolution: 3dppx), screen and (min-width: 1200px) and (min-resolution: 288dpi) {
+  .section-hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(/images/hero/laptop/Hero@3x.jpg);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .main-title {
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.364;
+    letter-spacing: 0.06em;
   }
 }
 
@@ -752,12 +854,12 @@ header {
   .skill-name {
     text-align: center;
   }
-  .company-skills {
+  .section-skills {
     margin-bottom: 60px;
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .list-skills {
     display: flex;
     justify-content: center;
@@ -773,14 +875,74 @@ header {
   .skill:not(:nth-child(2n)) {
     margin-right: 30px;
   }
+  .section-skills {
+    margin-bottom: 94px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .skill {
+    width: calc((100% - 60px) / 4);
+  }
+  .skill:not(:last-child) {
+    margin-right: 30px;
+  }
+  .list-skills {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+  }
   .company-skills {
-    margin-bottom: 60px;
+    margin-bottom: 94px;
   }
 }
 
 @media screen and (max-width: 1199px) {
   .section-lessons {
     display: none;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .section-lessons {
+    text-align: center;
+    margin-bottom: 94px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .lesson-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .lesson-list .lessons-list-link:not(:last-child) {
+    margin-right: 30px;
+  }
+  .minor-title {
+    margin-bottom: 50px;
+    font-size: 36px;
+    line-height: 1.17;
+  }
+  .lessons-list-link {
+    position: relative;
+    height: 295px;
+  }
+  .lessons-name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 370px;
+    height: 70px;
+    background-color: rgba(47, 48, 58, 0.8);
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #ffffff;
   }
 }
 
@@ -826,7 +988,7 @@ header {
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .team-list-link {
     display: flex;
     justify-content: center;
@@ -845,6 +1007,25 @@ header {
   }
   .minor-title {
     margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .our-team {
+    padding-top: 94px;
+  }
+  .team-list-link {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    flex-wrap: nowrap;
+  }
+  .team {
+    margin-bottom: 94px;
+    width: calc((100% - 30px) / 4);
+  }
+  .team:not(:last-child) {
+    margin-right: 30px;
   }
 }
 
@@ -960,7 +1141,7 @@ header {
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .company-users-link {
     display: flex;
     justify-content: center;
@@ -975,6 +1156,25 @@ header {
     margin-bottom: 30px;
   }
   .user-iten:not(:nth-child(3n)) {
+    margin-right: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .company-users-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin-bottom: 94px;
+  }
+  .user-iten {
+    width: calc((100% - 60px) / 6);
+  }
+  .user-iten:not(:nth-last-child(-n + 6)) {
+    margin-bottom: 30px;
+  }
+  .user-iten:not(:last-child) {
     margin-right: 30px;
   }
 }
@@ -1003,6 +1203,9 @@ header {
 }
 
 .footer-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 0;
   border: none;
   width: 200px;
@@ -1064,6 +1267,33 @@ header {
   }
 }
 
+@media screen and (min-width: 1200px) {
+  .footer-form {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+  .footer-form-input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .form-input {
+    display: block;
+    width: 358px;
+    margin-right: 12px;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .footer-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 29px;
+    padding-left: 29px;
+  }
+}
+
 .footer {
   background: #2f303a;
 }
@@ -1100,7 +1330,16 @@ header {
   color: #ffffff;
 }
 
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 767px) {
+  .footer-address-links {
+    text-align: center;
+  }
+  .social-list-link {
+    margin-bottom: 60px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .footer-nav {
     margin-bottom: 60px;
   }
@@ -1117,18 +1356,6 @@ header {
     margin-bottom: 20px;
     text-align: center;
   }
-}
-
-@media screen and (max-width: 767px) {
-  .footer-address-links {
-    text-align: center;
-  }
-  .social-list-link {
-    margin-bottom: 60px;
-  }
-}
-
-@media screen and (min-width: 768px) {
   .wrapper-footer {
     display: flex;
     justify-content: center;
@@ -1140,6 +1367,46 @@ header {
   }
   .footer-social-links {
     text-align: center;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .logo {
+    margin-bottom: 20px;
+  }
+  .wrapper-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  .footer {
+    background: #2f303a;
+  }
+  .footer-address-links .footer-address-iten:not(:last-child) {
+    margin-bottom: 9px;
+  }
+  .link-map {
+    font-style: normal;
+    cursor: pointer;
+    color: #ffffff;
+  }
+  .link-feedback {
+    font-size: 14px;
+    line-height: 1.71;
+    font-style: normal;
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.6);
+  }
+  .join {
+    display: block;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    color: #ffffff;
   }
 }
 
@@ -1308,19 +1575,19 @@ header {
 .icon-form-user {
   top: 50%;
   left: 19px;
-  transform: translateY(-50%);
+  transform: translateY(100%);
 }
 
 .icon-form-phone {
   top: 50%;
   left: 18.27px;
-  transform: translateY(-50%);
+  transform: translateY(100%);
 }
 
 .icon-form-letter {
   top: 50%;
   left: 17.5px;
-  transform: translateY(-50%);
+  transform: translateY(100%);
 }
 
 .modal-form-option {

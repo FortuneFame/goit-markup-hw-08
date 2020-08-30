@@ -23,6 +23,7 @@
   fill: $social-color;
   @include transitionSite;
 }
+
 @media screen and (max-width: 319px) {
   .user-iten {
     margin-bottom: 30px;
@@ -55,7 +56,7 @@
     flex-wrap: wrap;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .company-users-link {
     @include centeredFlex;
     flex-wrap: wrap;
@@ -69,5 +70,21 @@
       margin-right: 30px;
     }
     width: calc((100% - 60px) / 3);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .company-users-link {
+    @include centeredFlex;
+    flex-wrap: nowrap;
+    margin-bottom: 94px;
+  }
+  .user-iten {
+    &:not(:nth-last-child(-n + 6)) {
+      margin-bottom: 30px;
+    }
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+    width: calc((100% - 60px) / 6);
   }
 }

@@ -3,3 +3,50 @@
     display: none;
   }
 }
+@media screen and (min-width: 1200px) {
+  .section-lessons {
+    text-align: center;
+    margin-bottom: 94px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .lesson-list {
+    @include centeredFlex;
+
+    & .lessons-list-link:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+
+  .minor-title {
+    margin-bottom: 50px;
+
+    font-size: 36px;
+    line-height: 1.17;
+  }
+
+  .lessons-list-link {
+    position: relative;
+    height: 295px;
+  }
+
+  .lessons-name {
+    @include centeredFlex;
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 370px;
+    height: 70px;
+    background-color: $gradient-primary-color;
+
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: $page-color;
+  }
+}

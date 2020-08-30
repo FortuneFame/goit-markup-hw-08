@@ -53,7 +53,7 @@ header {
 }
 @media screen and (min-width: 768px) {
   header {
-    height: 80px;
+    // height: 80px;
   }
   .logo {
     font-family: Raleway;
@@ -75,6 +75,7 @@ header {
     height: 80px;
     padding-top: 32px;
     padding-bottom: 32px;
+    cursor: pointer;
   }
   .header-list-link {
     &:not(:last-child) {
@@ -93,6 +94,7 @@ header {
   .addrdess-link {
     @include centeredFlex(flex, start);
 
+    height: 100%;
     &:focus .feedback-tel,
     &:focus .feedback-mail {
       color: $accent-color;
@@ -128,6 +130,79 @@ header {
     }
   }
 }
+
+@media screen and (min-width: 1200px) {
+  header {
+    max-height: 80px;
+  }
+  header a {
+    height: 100%;
+    @include centeredFlex(flex, center, baseline);
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+
+  .addrdess-link {
+    @include centeredFlex;
+    @include transitionSite;
+    &:hover,
+    &:focus {
+      .address-icon,
+      .feedback-tel,
+      .feedback-mail {
+        color: $accent-color;
+        fill: $accent-color;
+      }
+    }
+  }
+  .iten-studio,
+  .iten-portfolio {
+    &::before {
+      content: "";
+      position: absolute;
+      display: inline-block;
+
+      left: 50%;
+      top: 44px;
+
+      margin-top: 30px;
+      width: 47px;
+      height: 4px;
+      transform: translate(-50%);
+
+      background-color: $accent-color;
+      border-radius: 2px;
+    }
+  }
+
+  .menu-wrapper {
+    @include centeredFlex(flex, space-between, baseline);
+  }
+  .feedback-list-item {
+    @include centeredFlex(flex, center, baseline);
+    height: 80px;
+  }
+  .header-list {
+    margin-right: 305px;
+  }
+  .logo {
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 1.192;
+    letter-spacing: 0.03em;
+    // margin-right: 93px;
+  }
+  .feedback {
+    @include transitionSite;
+    &:not(:last-child) {
+      margin-right: 50px;
+    }
+  }
+  .address-icon {
+    @include transitionSite;
+  }
+}
+
 @media screen and (max-width: 767px) {
   header {
     position: relative;
