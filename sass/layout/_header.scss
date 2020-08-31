@@ -21,7 +21,19 @@ header {
   opacity: 0;
   visibility: hidden;
 }
+.addrdess-link {
+  &:hover,
+  &:focus {
+    .address-icon,
+    .feedback-tel,
+    .feedback-mail {
+      color: $accent-color;
+      fill: $accent-color;
+    }
+  }
+}
 .address-icon {
+  @include transitionSite;
   fill: $pege-secondary-color;
 }
 
@@ -97,14 +109,6 @@ header {
     @include centeredFlex(flex, start);
 
     height: 100%;
-    &:focus .feedback-tel,
-    &:focus .feedback-mail {
-      color: $accent-color;
-    }
-
-    &:focus svg {
-      fill: $accent-color;
-    }
   }
   .address-icon {
     margin-right: 8px;
@@ -150,15 +154,6 @@ header {
     @include transitionSite;
     padding-top: 32px;
     padding-bottom: 32px;
-    &:hover,
-    &:focus {
-      .address-icon,
-      .feedback-tel,
-      .feedback-mail {
-        color: $accent-color;
-        fill: $accent-color;
-      }
-    }
   }
   .iten {
     padding-top: 32px;

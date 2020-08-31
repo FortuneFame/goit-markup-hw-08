@@ -375,7 +375,17 @@ header {
   visibility: hidden;
 }
 
+.addrdess-link:hover .address-icon,
+.addrdess-link:hover .feedback-tel,
+.addrdess-link:hover .feedback-mail, .addrdess-link:focus .address-icon,
+.addrdess-link:focus .feedback-tel,
+.addrdess-link:focus .feedback-mail {
+  color: #2196f3;
+  fill: #2196f3;
+}
+
 .address-icon {
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   fill: #757575;
 }
 
@@ -456,13 +466,6 @@ header {
     align-items: center;
     height: 100%;
   }
-  .addrdess-link:focus .feedback-tel,
-  .addrdess-link:focus .feedback-mail {
-    color: #2196f3;
-  }
-  .addrdess-link:focus svg {
-    fill: #2196f3;
-  }
   .address-icon {
     margin-right: 8px;
   }
@@ -506,14 +509,6 @@ header {
     transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
     padding-top: 32px;
     padding-bottom: 32px;
-  }
-  .addrdess-link:hover .address-icon,
-  .addrdess-link:hover .feedback-tel,
-  .addrdess-link:hover .feedback-mail, .addrdess-link:focus .address-icon,
-  .addrdess-link:focus .feedback-tel,
-  .addrdess-link:focus .feedback-mail {
-    color: #2196f3;
-    fill: #2196f3;
   }
   .iten {
     padding-top: 32px;
