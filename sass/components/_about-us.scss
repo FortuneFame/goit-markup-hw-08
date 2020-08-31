@@ -24,15 +24,16 @@
 
   color: $pege-secondary-color;
 }
+.company-skills {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
 @media screen and (max-width: 767px) {
   .icon-block-skill {
     max-width: 100%;
   }
   .skill-name {
     text-align: center;
-  }
-  .section-skills {
-    margin-bottom: 60px;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
@@ -51,9 +52,6 @@
       margin-right: 30px;
     }
   }
-  .section-skills {
-    margin-bottom: 94px;
-  }
 }
 @media screen and (min-width: 1200px) {
   .skill {
@@ -66,6 +64,7 @@
     @include centeredFlex(flex, center, baseline);
   }
   .company-skills {
-    margin-bottom: 94px;
+    padding-top: 94px;
+    padding-bottom: 94px;
   }
 }

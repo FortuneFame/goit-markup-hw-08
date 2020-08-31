@@ -18,6 +18,10 @@
     }
   }
 }
+.company-users {
+  padding-bottom: 60px;
+  padding-top: 60px;
+}
 
 .logo-clients {
   fill: $social-color;
@@ -31,9 +35,6 @@
 }
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
-  .company-users {
-    margin-bottom: 60px;
-  }
   .minor-title {
     margin-bottom: 30px;
   }
@@ -57,10 +58,13 @@
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
+  .company-users {
+    padding-bottom: 60px;
+    padding-top: 60px;
+  }
   .company-users-link {
     @include centeredFlex;
     flex-wrap: wrap;
-    margin-bottom: 60px;
   }
   .user-iten {
     &:not(:nth-last-child(-n + 3)) {
@@ -73,10 +77,13 @@
   }
 }
 @media screen and (min-width: 1200px) {
+  .company-users {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
   .company-users-link {
     @include centeredFlex;
     flex-wrap: nowrap;
-    margin-bottom: 94px;
   }
   .user-iten {
     &:not(:nth-last-child(-n + 6)) {

@@ -351,6 +351,23 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
+  height: 60px;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.logo {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  font-family: Raleway;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 1.166;
+  letter-spacing: 0.03em;
+  color: #2196f3;
 }
 
 .is-hidden {
@@ -362,20 +379,16 @@ header {
   fill: #757575;
 }
 
-.logo {
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: nowrap;
-}
-
 .logo-header {
   color: #000000;
 }
 
 .logo-footer {
   color: #ffffff;
+}
+
+.site-nav {
+  margin: 0;
 }
 
 .envelope {
@@ -410,13 +423,8 @@ header {
 }
 
 @media screen and (min-width: 768px) {
-  .logo {
-    font-family: Raleway;
-    font-weight: bold;
-    font-size: 24px;
-    line-height: 1.166;
-    letter-spacing: 0.03em;
-    color: #2196f3;
+  header {
+    height: 80px;
   }
   .menu-wrapper {
     font-weight: 500;
@@ -429,9 +437,6 @@ header {
     justify-content: center;
     align-items: center;
     margin-right: 84px;
-    height: 80px;
-    padding-top: 32px;
-    padding-bottom: 32px;
     cursor: pointer;
   }
   .header-list-link:not(:last-child) {
@@ -464,13 +469,22 @@ header {
   .menu-mobile-btn {
     display: none;
   }
+  .iten {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+  .iten-studio,
+  .iten-portfolio {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
   .iten-studio::before,
   .iten-portfolio::before {
     content: "";
     position: absolute;
     display: inline-block;
     left: 50%;
-    top: 44px;
+    bottom: 0;
     width: 47px;
     height: 4px;
     transform: translate(-50%);
@@ -480,22 +494,18 @@ header {
 }
 
 @media screen and (min-width: 1200px) {
-  header {
-    max-height: 80px;
-  }
   header a {
-    height: 100%;
     display: flex;
     justify-content: center;
-    align-items: baseline;
-    padding-top: 32px;
-    padding-bottom: 32px;
+    align-items: center;
   }
   .addrdess-link {
     display: flex;
     justify-content: center;
     align-items: center;
     transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    padding-top: 32px;
+    padding-bottom: 32px;
   }
   .addrdess-link:hover .address-icon,
   .addrdess-link:hover .feedback-tel,
@@ -505,36 +515,30 @@ header {
     color: #2196f3;
     fill: #2196f3;
   }
-  .iten-studio::before,
-  .iten-portfolio::before {
-    content: "";
-    position: absolute;
-    display: inline-block;
-    left: 50%;
-    top: 44px;
-    margin-top: 30px;
-    width: 47px;
-    height: 4px;
-    transform: translate(-50%);
-    background-color: #2196f3;
-    border-radius: 2px;
+  .iten {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+  .iten-studio,
+  .iten-portfolio {
+    padding-top: 32px;
+    padding-bottom: 32px;
   }
   .menu-wrapper {
     display: flex;
-    justify-content: space-between;
-    align-items: baseline;
+    justify-content: center;
+    align-items: center;
   }
   .feedback-list-item {
-    display: flex;
-    justify-content: center;
-    align-items: baseline;
     height: 80px;
+    display: flex;
+    align-items: flex-start;
   }
   .header-list {
     margin-right: 305px;
   }
   .logo {
-    font-weight: bold;
+    font-weight: 900;
     font-size: 26px;
     line-height: 1.192;
     letter-spacing: 0.03em;
@@ -547,23 +551,6 @@ header {
   }
   .address-icon {
     transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
-}
-
-@media screen and (max-width: 767px) {
-  header {
-    position: relative;
-    height: 60px;
-    max-width: 480px;
-    margin: 0 auto;
-  }
-  .logo {
-    font-family: Raleway;
-    font-weight: bold;
-    font-size: 24px;
-    line-height: 1.166;
-    letter-spacing: 0.03em;
-    color: #2196f3;
   }
 }
 
@@ -1237,6 +1224,9 @@ header {
   .logo-company-footer {
     margin-bottom: 20px;
   }
+  .logo-company-footer .logo {
+    justify-content: center;
+  }
   .footer-address-iten {
     text-align: center;
   }
@@ -1264,6 +1254,9 @@ header {
   }
   .logo-company-footer {
     margin-bottom: 20px;
+  }
+  .logo-company-footer .logo {
+    justify-content: center;
   }
   .footer-address-iten {
     text-align: center;

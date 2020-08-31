@@ -1,7 +1,22 @@
 header {
   @include centeredFlex(flex, space-between);
+  position: relative;
+  height: 60px;
+  max-width: 480px;
+  margin: 0 auto;
 }
-
+.logo {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  font-family: Raleway;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 1.166;
+  letter-spacing: 0.03em;
+  color: $logo-color-one;
+}
 .is-hidden {
   opacity: 0;
   visibility: hidden;
@@ -10,19 +25,15 @@ header {
   fill: $pege-secondary-color;
 }
 
-.logo {
-  height: 100%;
-  @include centeredFlex;
-  flex-wrap: nowrap;
-}
-
 .logo-header {
   color: $logo-color-two;
 }
 .logo-footer {
   color: $logo-color-three;
 }
-
+.site-nav {
+  margin: 0;
+}
 .envelope {
   width: 16px;
   height: 11.2px;
@@ -51,17 +62,10 @@ header {
   position: relative;
   color: $accent-color;
 }
+
 @media screen and (min-width: 768px) {
   header {
-    // height: 80px;
-  }
-  .logo {
-    font-family: Raleway;
-    font-weight: bold;
-    font-size: 24px;
-    line-height: 1.166;
-    letter-spacing: 0.03em;
-    color: $logo-color-one;
+    height: 80px;
   }
   .menu-wrapper {
     font-weight: 500;
@@ -72,9 +76,7 @@ header {
   .header-list {
     @include centeredFlex;
     margin-right: 84px;
-    height: 80px;
-    padding-top: 32px;
-    padding-bottom: 32px;
+
     cursor: pointer;
   }
   .header-list-link {
@@ -110,15 +112,21 @@ header {
   .menu-mobile-btn {
     display: none;
   }
+  .iten {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
   .iten-studio,
   .iten-portfolio {
+    padding-top: 32px;
+    padding-bottom: 32px;
     &::before {
       content: "";
       position: absolute;
       display: inline-block;
 
       left: 50%;
-      top: 44px;
+      bottom: 0;
 
       // margin-top: 80px;
       width: 47px;
@@ -132,19 +140,16 @@ header {
 }
 
 @media screen and (min-width: 1200px) {
-  header {
-    max-height: 80px;
-  }
   header a {
-    height: 100%;
-    @include centeredFlex(flex, center, baseline);
-    padding-top: 32px;
-    padding-bottom: 32px;
+    // height: 100%;
+    @include centeredFlex;
   }
 
   .addrdess-link {
     @include centeredFlex;
     @include transitionSite;
+    padding-top: 32px;
+    padding-bottom: 32px;
     &:hover,
     &:focus {
       .address-icon,
@@ -155,42 +160,32 @@ header {
       }
     }
   }
+  .iten {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
   .iten-studio,
   .iten-portfolio {
-    &::before {
-      content: "";
-      position: absolute;
-      display: inline-block;
-
-      left: 50%;
-      top: 44px;
-
-      margin-top: 30px;
-      width: 47px;
-      height: 4px;
-      transform: translate(-50%);
-
-      background-color: $accent-color;
-      border-radius: 2px;
-    }
+    padding-top: 32px;
+    padding-bottom: 32px;
   }
 
   .menu-wrapper {
-    @include centeredFlex(flex, space-between, baseline);
+    @include centeredFlex;
   }
   .feedback-list-item {
-    @include centeredFlex(flex, center, baseline);
     height: 80px;
+    display: flex;
+    align-items: flex-start;
   }
   .header-list {
     margin-right: 305px;
   }
   .logo {
-    font-weight: bold;
+    font-weight: 900;
     font-size: 26px;
     line-height: 1.192;
     letter-spacing: 0.03em;
-    // margin-right: 93px;
   }
   .feedback {
     @include transitionSite;
@@ -200,22 +195,5 @@ header {
   }
   .address-icon {
     @include transitionSite;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  header {
-    position: relative;
-    height: 60px;
-    max-width: 480px;
-    margin: 0 auto;
-  }
-  .logo {
-    font-family: Raleway;
-    font-weight: bold;
-    font-size: 24px;
-    line-height: 1.166;
-    letter-spacing: 0.03em;
-    color: $logo-color-one;
   }
 }

@@ -39,6 +39,9 @@
 
 @media screen and (max-width: 767px) {
   .logo-company-footer {
+    .logo {
+      justify-content: center;
+    }
     margin-bottom: 20px;
   }
 
@@ -68,6 +71,9 @@
     margin-bottom: 60px;
   }
   .logo-company-footer {
+    .logo {
+      justify-content: center;
+    }
     margin-bottom: 20px;
   }
   .footer-address-iten {

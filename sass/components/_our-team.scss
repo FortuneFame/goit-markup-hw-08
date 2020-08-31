@@ -14,7 +14,7 @@
 .our-team {
   padding-top: 60px;
   background: $section-secondary-color;
-  margin-bottom: 60px;
+  padding-bottom: 60px;
 }
 
 .team-foto {
@@ -72,13 +72,13 @@
 @media screen and (min-width: 1200px) {
   .our-team {
     padding-top: 94px;
+    padding-bottom: 94px;
   }
   .team-list-link {
     @include centeredFlex(flex, center, baseline);
     flex-wrap: nowrap;
   }
   .team {
-    margin-bottom: 94px;
     width: calc((100% - 30px) / 4);
 
     &:not(:last-child) {
